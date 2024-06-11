@@ -7,9 +7,10 @@ f1_races <- races
 head(f1_races)
 attach(f1_races)
 
-# Check the number of entries and columns
+# Check the number of entries and columns and missing values
 nrow(f1_races)
 ncol(f1_races)
+sum(is.na(f1_races))
 
 # Round of races in each year
 ggplot(f1_races, aes(x = year)) +
